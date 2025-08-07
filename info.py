@@ -221,4 +221,108 @@ cmds = [
     {"settings": "Change Bot Setting"},
     {"grp_cmds": "Check Group Commands"},
     {"admin_cmds": "Bot Admin Commands"},
+]    "2K",
+    "2160p",
+    "4k",
+    "5K",
+    "8K",
+]
+YEARS = [f"{i}" for i in range(2025, 2002, -1)]
+SEASONS = [f"season {i}" for i in range(1, 23)]
+
+# Pictures And Reaction
+START_IMG = (
+    environ.get(
+        "START_IMG",
+        "https://i.ibb.co/qpxpGmC/image.jpg https://i.ibb.co/DQ35zLZ/image.jpg",
+    )
+).split()
+FORCESUB_IMG = environ.get("FORCESUB_IMG", "https://i.ibb.co/ZNC1Hnb/ad3f2c88a8f2.jpg")
+REFER_PICS = (environ.get("REFER_PICS", "https://envs.sh/PSI.jpg")).split()
+PAYPICS = (
+    environ.get("PAYPICS", "https://graph.org/file/f4db1c3ad3d9e38b328e6.jpg")
+).split()
+SUBSCRIPTION = environ.get(
+    "SUBSCRIPTION", "https://graph.org/file/9f3f47c690bbcc67633c2.jpg"
+)
+REACTIONS = ["👀", "😱", "🔥", "😍", "🎉", "🥰", "😇", "⚡"]
+
+
+# Other Funtions
+FILE_AUTO_DEL_TIMER = int(environ.get("FILE_AUTO_DEL_TIMER", "600"))
+AUTO_FILTER = is_enabled("AUTO_FILTER", True)
+IS_PM_SEARCH = is_enabled("IS_PM_SEARCH", False)
+IS_SEND_MOVIE_UPDATE = is_enabled(
+    "IS_SEND_MOVIE_UPDATE", False
+)  # Don't Change It ( If You Want To Turn It On Then Turn It On By Commands) We Suggest You To Make It Turn Off If You Are Indexing Files First Time.
+MAX_BTN = int(environ.get("MAX_BTN", "8"))
+AUTO_DELETE = is_enabled("AUTO_DELETE", True)
+DELETE_TIME = int(environ.get("DELETE_TIME", 1200))
+IMDB = is_enabled("IMDB", False)
+FILE_CAPTION = environ.get("FILE_CAPTION", f"{script.FILE_CAPTION}")
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", f"{script.IMDB_TEMPLATE_TXT}")
+LONG_IMDB_DESCRIPTION = is_enabled("LONG_IMDB_DESCRIPTION", False)
+PROTECT_CONTENT = is_enabled("PROTECT_CONTENT", False)
+SPELL_CHECK = is_enabled("SPELL_CHECK", True)
+LINK_MODE = is_enabled("LINK_MODE", True)
+TMDB_API_KEY = environ.get("TMDB_API_KEY", "")
+
+# Online Streaming And Download
+STREAM_MODE = bool(environ.get("STREAM_MODE", True))  # Set True or Flase
+
+MULTI_CLIENT = False
+SLEEP_THRESHOLD = int(environ.get("SLEEP_THRESHOLD", "60"))
+PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
+if "DYNO" in environ:
+    ON_HEROKU = True
+else:
+    ON_HEROKU = False
+URL = environ.get("FQDN", "")
+
+# Commands
+admin_cmds = [
+    "/add_premium - Add A User To Premium",
+    "/premium_users - View All Premium Users",
+    "/remove_premium - Remove A User's Premium Status",
+    "/add_redeem - Generate A Redeem Code",
+    "/refresh - Refresh Free Trail",
+    "/set_muc - Set Movie Update Channel",
+    "/pm_search_on - Enable PM Search",
+    "/pm_search_off - Disable PM Search",
+    "/set_ads - Set Advertisements",
+    "/del_ads - Delete Advertisements",
+    "/setlist - Set Top Trending List",
+    "/clearlist - Clear Top Trending List",
+    "/verify_id - Verification Off ID",
+    "/index - Index Files",
+    "/send - Send Message To A User",
+    "/leave - Leave A Group Or Channel",
+    "/ban - Ban A User",
+    "/unban - Unban A User",
+    "/broadcast - Broadcast Message",
+    "/grp_broadcast - Broadcast Messages To Groups",
+    "/delreq - Delete Join Request",
+    "/channel - List Of Database Channels",
+    "/del_file - Delete A Specific File",
+    "/delete - Delete A File(By Reply)",
+    "/deletefiles - Delete Multiple Files",
+    "/deleteall - Delete All Files",
+]
+
+cmds = [
+    {"start": "Start The Bot"},
+    {"most": "Get Most Searches Button List"},
+    {"trend": "Get Top Trending Button List"},
+    {"mostlist": "Show Most Searches List"},
+    {"trendlist": "𝖦𝖾𝗍 𝖳𝗈𝗉 𝖳𝗋𝖾𝗇𝖽𝗂𝗇𝗀 𝖡𝗎𝗍𝗍𝗈𝗇 𝖫𝗂𝗌t"},
+    {"plan": "Check Available Premium Membership Plans"},
+    {"myplan": "Check Your Currunt Plan"},
+    {"refer": "To Refer Your Friend And Get Premium"},
+    {"stats": "Check My Database"},
+    {"id": "Get Telegram Id"},
+    {"font": "To Generate Cool Fonts"},
+    {"details": "Check Group Details"},
+    {"settings": "Change Bot Setting"},
+    {"grp_cmds": "Check Group Commands"},
+    {"admin_cmds": "Bot Admin Commands"},
 ]
